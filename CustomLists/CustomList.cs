@@ -58,12 +58,19 @@ namespace CustomLists
         // member methods (CAN DO)
         public void Add(T item)
         {
-            if (count == capacity)
+            
+
+            if (count < capacity)
             {
-                T[] expandArray = new T[capacity * 2];
+                items[count] = item;
+                count++;
             }
-            else items[count] = item;
-            count++;
+            else
+            {
+                capacity = (capacity * 2);
+                T[] biggerItems = new T[capacity];
+                count++;
+            }
         }
     }
 }
