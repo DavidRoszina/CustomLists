@@ -1,0 +1,17 @@
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\obj\Debug\UnitTests.csprojAssemblyReference.cache
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\obj\Debug\UnitTests.csproj.CoreCompileInputs.cache
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\CustomListsTest.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\CustomListsTest.pdb
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\CustomLists.exe
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\CustomLists.pdb
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\CustomLists.exe.config
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\obj\Debug\UnitTests.csproj.CopyComplete
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\obj\Debug\CustomListsTest.dll
+C:\Users\david\Desktop\devCodeCamp\Projects\CustomLists\CustomLists\CustomListsTest\obj\Debug\CustomListsTest.pdb

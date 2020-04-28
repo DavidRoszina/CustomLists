@@ -44,30 +44,24 @@ namespace CustomListsTest
 
         // what happens if you add multiple things (or add to a CustomList that already has some values)?
         [TestMethod]
-        public void AddToExistingArrayTest()
+        public void AddThreePositiveValues_CheckIndexOne()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
-            int itemToAdd = 10;
-            int expected = 10;
-            int expected1 = 20;
-            int expected2 = 30;
+            int itemToAdd1 = 10;
+            int itemToAdd2 = 20;
+            int itemToAdd3 = 30;
+            int expected = 20;
             int actual;
-            int actual1;
-            int actual2;
+            
 
             //act
-            testList.Add(itemToAdd); 
-            testList.Add(itemToAdd);
-            //Above assumes 2 items have already been in the list
-            testList.Add(itemToAdd * 2);
-            testList.Add(itemToAdd * 3);
-            actual = testList[0, 1];
-            actual1 = testList[2];
-            actual2 = testList[3];
-
+            testList.Add(itemToAdd1); 
+            testList.Add(itemToAdd2);
+            testList.Add(itemToAdd3);
+            actual = testList[1];
             //assert
-            Assert.IsTrue(expected == actual && expected1 == actual1 && expected2 == actual2);
+            Assert.AreEqual(expected, actual);
         }
         // what happens to the last-added item?
 
@@ -75,7 +69,7 @@ namespace CustomListsTest
 
         // what happens if you add more items than the initial Capacity of the CustomList?
         [TestMethod]
-        public void IncreaseArrayCapacityTest()
+        public void AddFivePositiveValues_CheckCount()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -94,6 +88,26 @@ namespace CustomListsTest
             //assert
             Assert.AreEqual(expected, actual);
             
+        }
+        public void IncreaseArrayCapacityTest()
+        {
+            //arrange
+            CustomList<int> testList = new CustomList<int>();
+            int itemToAdd = 10;
+            int expected = 8;
+            int actual;
+
+            //act
+            testList.Add(itemToAdd);
+            testList.Add(itemToAdd);
+            testList.Add(itemToAdd);
+            testList.Add(itemToAdd);
+            testList.Add(itemToAdd);
+            actual = testList.Capacity;
+
+            //assert
+            Assert.AreEqual(expected, actual);
+
         }
     }
 }

@@ -13,10 +13,46 @@ namespace CustomLists
         private int capacity;
         private int count;
 
+        public int Count
+        {
+            get
+            {
+                return count;
+            }
+        }
+        public int Capacity
+        {
+            get
+            {
+                return capacity;
+            }
+        }
+        public T this[int index]
+        {
+            get
+            {
+                if (index < count && index >= 0)
+                {
+                    return items[index];
+                }
+                else;
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+            }
+            set
+            {
+                items[index] = value;
+
+            }
+        }
+
         // constructor (SPAWNER)
         public CustomList()
         {
-            items = new T[4];
+            count = 0;
+            capacity = 4;
+            items = new T[capacity];
         }
 
         // member methods (CAN DO)
@@ -26,6 +62,8 @@ namespace CustomLists
             {
                 T[] expandArray = new T[capacity * 2];
             }
+            else items[count] = item;
+            count++;
         }
     }
 }
