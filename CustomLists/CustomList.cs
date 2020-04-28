@@ -10,6 +10,8 @@ namespace CustomLists
     {
         // member variables (HAS A)
         private T[] items;
+        private int capacity;
+        private int count;
 
         // constructor (SPAWNER)
         public CustomList()
@@ -20,7 +22,10 @@ namespace CustomLists
         // member methods (CAN DO)
         public void Add(T item)
         {
-
+            if (count == capacity)
+            {
+                T[] expandArray = new T[capacity * 2];
+            }
         }
     }
 }
