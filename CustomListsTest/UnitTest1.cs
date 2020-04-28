@@ -89,6 +89,7 @@ namespace CustomListsTest
             Assert.AreEqual(expected, actual);
             
         }
+        [TestMethod]
         public void IncreaseArrayCapacityTest()
         {
             //arrange
