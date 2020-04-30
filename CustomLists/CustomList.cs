@@ -14,6 +14,7 @@ namespace CustomLists
         private int capacity;
         private int count;
         private int i;
+        private int index;
         
         public IEnumerator GetEnumerator()
         {
@@ -65,35 +66,49 @@ namespace CustomLists
             items = new T[capacity];
             
             
+            
         }
 
         // member methods (CAN DO)
         public void Add(T item)
         {
-            
-
-            
+            if (count < capacity)
             {
-                if (count < capacity)
-                {
-                    items[count] = item;
-                    count++;
-                }
-                else
-                {
-                    capacity = (capacity * 2);
-                    T[] biggerItems = new T[capacity];
-                    for (i = 0; i < count; i++)
-                    {
-                        biggerItems[i] = items[i];
-                    }
-                    items = biggerItems;
-                    items[count] = item;
-                    count++;
-                    
-                }
+                items[count] = item;
+                count++;
             }
-            
+            else
+            {
+                capacity = (capacity * 2);
+                T[] biggerItems = new T[capacity];
+                for (i = 0; i < count; i++)
+                {
+                    biggerItems[i] = items[i];
+                }
+                items = biggerItems;
+                items[count] = item;
+                count++;  
+            }  
+        }
+        public void Remove(T item)
+        {
+            {
+                if (count == items.Length)
+                {
+                    item = default;
+                    count--;
+                }
+                else (i < count)
+                {
+
+
+                    for (int i = index; i < items.Length - 1; i++)
+                    {
+                        items[i] = items[i + 1];
+                    } 
+                }
+                
+            }
         }
     }
 }
