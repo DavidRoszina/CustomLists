@@ -13,8 +13,9 @@ namespace CustomLists
         private T[] items;
         private int capacity;
         private int count;
-        private int i;
-        private int index;
+        public int c;
+        
+        
         
         public IEnumerator GetEnumerator()
         {
@@ -53,10 +54,20 @@ namespace CustomLists
             set
             {
                 items[index] = value;
-
             }
         }
-        
+        //public int this[T obj]
+        //{
+        //    get
+        //    {
+        //        for (int i = 0; i < count; i++)
+        //        {
+
+        //        }
+        //    }
+        //}
+
+
 
         // constructor (SPAWNER)
         public CustomList()
@@ -81,7 +92,7 @@ namespace CustomLists
             {
                 capacity = (capacity * 2);
                 T[] biggerItems = new T[capacity];
-                for (i = 0; i < count; i++)
+                for (int i = 0; i < count; i++)
                 {
                     biggerItems[i] = items[i];
                 }
@@ -92,23 +103,60 @@ namespace CustomLists
         }
         public void Remove(T item)
         {
+            //locate item
+            T[] tempList = new T[capacity];
+            for (int i = 0; i < count; i++)
             {
-                if (count == items.Length)
+                tempList[i] = items[i];
+            }
+            foreach (var i in tempList)
+            {
+                Console.WriteLine("This list contains values:" + item);
+            }
+            Console.WriteLine("Which value would you like to remove?\n");
+            string itemToGet = Console.ReadLine();
+            if (tempList.Contains(itemToGet))
+            {
+                Console.WriteLine("Value found");
+            }
+            int indexToRemove = tempList.IndexOf(item);
+            if (indexToRemove >= 0)
+            {
+                tempList[indexToRemove] = default;
+            }
+            for (int i = indexToRemove; i < items.Length - 1; i++)
+            {
+                items[i] = items[i + 1];
+            }
+            count--;
+            //declare variable that represents whether something has been removed
+            bool itemHasBeenRemoved = false;
+            T[] tempItems = new T[capacity];
+            if (tempItems.Length < items.Length)
+            {
+                itemHasBeenRemoved = true;
+                for (int i = 0; i < count; i++)
                 {
-                    item = default;
-                    count--;
-                }
-                else (i < count)
-                {
-
-
-                    for (int i = index; i < items.Length - 1; i++)
-                    {
-                        items[i] = items[i + 1];
-                    } 
+                    tempItems[i] = items[i];
                 }
                 
             }
+            //new array to fill (i=0; i < count; i++)
+            
+            //if/else (is item in array)(if not, skip)
+            //for (int i = 0; i < count; i++)
+            //{
+            //    items[i] = items[i + 1];
+            //}
+            //count--;
+        }
+        public void RemoveAt(int indexToRemove)
+        {
+            for (int i = indexToRemove; i < items.Length - 1; i++)
+            {
+                items[i] = items[i + 1];
+            }
+            count--;
         }
     }
 }

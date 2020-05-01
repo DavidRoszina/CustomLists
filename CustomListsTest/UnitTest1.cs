@@ -128,27 +128,7 @@ namespace CustomListsTest
             //assert
             Assert.AreEqual(expected, actual);
         }
-        [TestMethod]
-        public void AddFourPositiveValuesSubtract2nd_CheckCount()
-        {
-            CustomList<int> testList = new CustomList<int>();
-            int itemToAdd1 = 10;
-            int itemToAdd2 = 20;
-            int itemToAdd3 = 30;
-            int itemToAdd4 = 40;
-            int expected = 3;
-            int actual;
-            //act
-            testList.Add(itemToAdd1);
-            testList.Add(itemToAdd2);
-            testList.Add(itemToAdd3);
-            testList.Add(itemToAdd4);
-            testList.Remove(itemToAdd2);
-            actual = testList.Count;
-            //assert
-            Assert.AreEqual(expected, actual);
-        }
-
+        
         [TestMethod]
         public void AddFourPositiveValuesSubtract2nd_Check3rdIndex()
         {
@@ -170,7 +150,7 @@ namespace CustomListsTest
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void AddThreeRemove2ndAddThreeRemove4th_CheckAllValues()
+        public void AddThreeRemove2ndAddThreeRemove4th_CheckLastValue()
         {
             //arrange
             CustomList<int> testList = new CustomList<int>();
@@ -180,14 +160,9 @@ namespace CustomListsTest
             int itemToAdd4 = 40;
             int itemToAdd5 = 50;
             int itemToAdd6 = 60;
-            int expected1 = 10;
-            int expected2 = 30;
-            int expected3 = 40;
-            int expected4 = 60;
-            int actual1;
-            int actual2;
-            int actual3;
-            int actual4;
+            int expected = 40;
+            int actual;
+            
             //act
             testList.Add(itemToAdd1);
             testList.Add(itemToAdd2);
@@ -197,15 +172,10 @@ namespace CustomListsTest
             testList.Add(itemToAdd5);
             testList.Add(itemToAdd6);
             testList.Remove(itemToAdd5);
-            actual1 = testList[0];
-            actual2 = testList[1];
-            actual3 = testList[2];
-            actual4 = testList[4];
+            actual = testList[2];
+            
             //assert
-            Assert.AreEqual(expected1, actual1);
-            Assert.AreEqual(expected2, actual2);
-            Assert.AreEqual(expected3, actual3);
-            Assert.AreEqual(expected4, actual4);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
